@@ -1,4 +1,3 @@
-// Musik mulai di menit 1:00 (60 detik) dan berhenti di 1:30 (90 detik)
 const audio = document.getElementById("lagu");
 
 function playMusic() {
@@ -14,7 +13,7 @@ function playMusic() {
 }
 
 
-// Efek confetti & buka hadiah
+// efek
 function bukaSurprise() {
     for (let i = 0; i < 50; i++) {
         let confetti = document.createElement("div");
@@ -34,7 +33,7 @@ function bukaSurprise() {
     }, 1500);
 }
 
-// Tombol "Tidak Buka" kabur
+// button kabur
 function kabur() {
     let btn = document.getElementById("noButton");
     btn.style.position = "absolute";
