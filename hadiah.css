@@ -10,7 +10,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Judul utama */
+/* juduk */
 h1 {
     font-family: 'Fredoka One', cursive;
     font-size: 2.5em;
@@ -26,7 +26,7 @@ h2 {
     color: #ff4d94;
 }
 
-/* Bagian Ucapan */
+/*ucapan */
 .section-ucapan {
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ h2 {
     font-size: 1.2em;
 }
 
-/* Memories */
+/* foto */
 .section-memories {
     padding: 20px;
     overflow-x: auto;
@@ -73,7 +73,7 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Puisi & Terimakasih */
+/* puisi trimakasih */
 .section-akhir {
     display: flex;
     justify-content: center;
@@ -103,7 +103,7 @@ h2 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Judul dalam card */
+/* judul card */
 .section-akhir h3 {
     font-family: 'Fredoka One', cursive;
     font-size: 1.4em;
@@ -111,7 +111,7 @@ h2 {
     color: #ff4d94;
 }
 
-/* Jarak antar paragraf */
+/* jarak paragraf */
 .section-akhir p {
     margin-bottom: 15px;
 }
@@ -129,7 +129,7 @@ h2 {
     }
 }
 
-/* Animasi fade/slide masuk */
+/* fade */
 .fade-slide {
     opacity: 0;
     transform: translateY(40px);
@@ -182,7 +182,7 @@ h2 {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-/* Container Memories Scroll */
+/* container foto */
 .memories-container {
     display: flex;
     gap: 20px;
@@ -199,7 +199,7 @@ h2 {
     border-radius: 10px;
 }
 
-/* Polaroid Style */
+/* polaroid */
 .polaroid {
     flex: 0 0 auto;
     background: white;
@@ -211,7 +211,7 @@ h2 {
     scroll-snap-align: center;
 }
 
-/* Semua foto sama ukuran */
+/* ukuran foto */
 .polaroid img {
     display: block;
     width: 180px;
@@ -220,7 +220,7 @@ h2 {
     border-radius: 8px;
 }
 
-/* Hover efek lucu */
+/* hover */
 .polaroid:hover {
     transform: rotate(-2deg) scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
