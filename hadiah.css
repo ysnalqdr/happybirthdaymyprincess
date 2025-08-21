@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #ffccd5);
+    margin: 0;
+    padding: 0;
+    color: #b3005e;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Judul utama */
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5em;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8em;
+    margin: 40px 0 20px;
+    text-align: center;
+    color: #ff4d94;
+}
+
+/* Bagian Ucapan */
+.section-ucapan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* biar aman di mobile */
+}
+
+.section-ucapan img {
+    width: 220px;
+    max-width: 100%;
+    border-radius: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.section-ucapan p {
+    max-width: 400px;
+    font-size: 1.2em;
+}
+
+/* Memories */
+.section-memories {
+    padding: 20px;
+    overflow-x: auto;
+    display: flex;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+}
+
+.section-memories img {
+    flex: 0 0 auto;
+    width: 180px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.section-memories img:hover {
+    transform: scale(1.05);
+}
+
+/* Puisi & Terimakasih */
+.section-akhir {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.section-akhir .puisi,
+.section-akhir .terimakasih {
+    flex: 1 1 300px;
+    background: #fff0f6;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 1em;
+}
+
+/* Animasi fade/slide masuk */
+.fade-slide {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideIn 1s forwards;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .section-ucapan {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-akhir {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-akhir .puisi,
+    .section-akhir .terimakasih {
+        max-width: 90%;
+    }
+}
+
+/*PPPP*/
+.memories {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.memories h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #b3005e;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Container Memories Scroll */
+.memories-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.memories-container::-webkit-scrollbar {
+    height: 8px;
+}
+.memories-container::-webkit-scrollbar-thumb {
+    background: #ffb6c1;
+    border-radius: 10px;
+}
+
+/* Polaroid Style */
+.polaroid {
+    flex: 0 0 auto;
+    background: white;
+    padding: 10px;
+    border: 4px solid #ffb6c1;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: center;
+}
+
+/* Semua foto sama ukuran */
+.polaroid img {
+    display: block;
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Hover efek lucu */
+.polaroid:hover {
+    transform: rotate(-2deg) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* biar rapi di HP */
+}
+
+.card {
+    background: #ffe6f0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: left;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #b3005e;
+}

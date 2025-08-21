@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #ffd6e8);
+    text-align: center;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Amplop */
+.envelope {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    margin-top: 10px;
+    border: 2px solid #ffb6c1;
+}
+
+/* Tombol */
+.buttons button {
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.buttons button:hover {
+    background-color: #ff66b2;
+}
+
+/* Sembunyikan audio */
+audio {
+    display: none;
+}
+
+/* Tambahan agar responsif di HP */
+@media (max-width: 768px) {
+    body {
+        padding-top: 10px;
+    }
+
+    .envelope {
+        width: 90%;
+        padding: 15px;
+        margin-top: 5px;
+    }
+
+    .buttons button {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 8px auto;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* ====== responsif ====== */
+@media (max-width: 768px){
+  :root{
+    --cake-w: 180px;
+    --cake-h: 105px;
+    --icing-h: 30px;
+  }
+}
+@media (max-width: 480px){
+  :root{
+    --cake-w: 160px;
+    --cake-h: 95px;
+    --icing-h: 28px;
+  }
+}
+/* ========= THEME ========= */
+:root{
+  --pink-50:#fff1f6;
+  --pink-100:#ffe6f0;
+  --pink-200:#ffd6e8;
+  --pink-300:#ffc3da;
+  --pink-400:#ff9ec3;
+  --pink-500:#ff76b3;
+  --cake-shadow: 0 16px 40px rgba(255,118,179,.25);
+  --line: rgba(255, 180, 210, .8);
+
+  --cake-w: 280px;   /* lebar cake (responsive di bawah) */
+  --cake-h: 170px;   /* tinggi total badan cake */
+  --radius: 18px;
+}
+
+/* panggung / penempatan */
+.cake-stage{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 52vh;
+  padding: 24px 12px;
+  position: relative;
+}
+
+/* wrapper cake: floating pelan */
+.cake{
+  position: relative;
+  width: var(--cake-w);
+  height: var(--cake-h);
+  filter: drop-shadow(var(--cake-shadow));
+  animation: cakeFloat 6s ease-in-out infinite;
+}
+
+@keyframes cakeFloat{
+  0%,100%{ transform: translateY(0) }
+  50%{ transform: translateY(-6px) }
+}
+
+/* piring */
+.plate{
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
+  width: calc(var(--cake-w) + 60px);
+  height: 26px;
+  background: radial-gradient(ellipse at 50% 50%, #ffffff 0%, #f7f7f7 60%, #e9e9e9 100%);
+  border-radius: 999px;
+  box-shadow: inset 0 2px 0 #fff, 0 6px 14px rgba(0,0,0,.06);
+}
+
+/* ========== LAYERS ========== */
+.layer{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  width: var(--cake-w);
+  background: linear-gradient(180deg, #fff7fb 0%, #ffeef6 60%, #ffe5f0 100%);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  overflow: visible;
+}
+
+/* shimmer halus pada badan kue */
+.layer::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.8) 12%, transparent 25%);
+  mix-blend-mode: screen;
+  transform: translateX(-120%);
+  animation: shimmer 8s linear infinite;
+  border-radius: inherit;
+}
+@keyframes shimmer{
+  to { transform: translateX(120%); }
+}
+
+/* layer size/pos */
+.layer-bottom{ bottom: 6px;  height: 64px; }
+.layer-middle{ bottom: 56px; height: 58px; width: calc(var(--cake-w) - 22px); }
+.layer-top{    bottom: 102px; height: 46px; width: calc(var(--cake-w) - 44px); }
+
+/* ========== FROSTING ========== */
+.frosting{
+  position:absolute;
+  left:50%; top:-18px;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 34px;
+  background: linear-gradient(180deg, var(--pink-500), var(--pink-400));
+  border-radius: 16px;
+  box-shadow: 0 4px 0 var(--pink-300);
+  overflow: visible;
+}
+
+/* gelombang + tetes frosting */
+.frosting::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:24px;
+  height: 26px;
+  background:
+    radial-gradient(circle at 14px 0, var(--pink-500) 14px, transparent 15px) 0 0/28px 28px repeat-x;
+  /* animasi gelombang pelan */
+  animation: wave 5.5s linear infinite;
+  filter: drop-shadow(0 2px 0 var(--pink-300));
+}
+@keyframes wave{
+  from{ background-position-x: 0; }
+  to{   background-position-x: -280px; }
+}
+
+/* ========== CANDLE ========== */
+.candle{
+  position:absolute;
+  top: -62px;
+  left:50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 44px;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff, #fff 6px,
+    #ffd7e6 6px, #ffd7e6 12px
+  );
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: inset 0 -10px 0 #ffe2ee;
+  z-index: 3;
+}
+.wick{
+  position:absolute;
+  left:50%; top:-8px;
+  transform: translateX(-50%);
+  width: 2px; height: 10px; background:#333; border-radius:2px;
+}
+
+/* api lilin (flicker lembut) */
+.flame{
+  position:absolute;
+  left:50%; top:-22px;
+  transform: translateX(-50%);
+  width: 18px; height: 26px;
+  border-radius: 50% 50% 48% 48%;
+  background: radial-gradient(ellipse at 50% 60%, #ffe27a 0%, #ffc857 55%, rgba(255,200,87,0) 70%);
+  filter: drop-shadow(0 0 8px rgba(255, 196, 0, .85));
+  animation: flick
+}
