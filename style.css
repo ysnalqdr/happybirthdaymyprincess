@@ -6,7 +6,7 @@ body {
     padding-top: 20px;
 }
 
-/* Amplop */
+/* amplop */
 .envelope {
     background: white;
     padding: 20px;
@@ -17,7 +17,7 @@ body {
     border: 2px solid #ffb6c1;
 }
 
-/* Tombol */
+/* button */
 .buttons button {
     background-color: #ff99cc;
     color: white;
@@ -41,7 +41,7 @@ audio {
     display: none;
 }
 
-/* Tambahan agar responsif di HP */
+/* responsive mobile */
 @media (max-width: 768px) {
     body {
         padding-top: 10px;
@@ -63,7 +63,7 @@ audio {
     }
 }
 
-/* ====== responsif ====== */
+/* responsif */
 @media (max-width: 768px){
   :root{
     --cake-w: 180px;
@@ -78,7 +78,7 @@ audio {
     --icing-h: 28px;
   }
 }
-/* ========= THEME ========= */
+/* tema */
 :root{
   --pink-50:#fff1f6;
   --pink-100:#ffe6f0;
@@ -94,7 +94,7 @@ audio {
   --radius: 18px;
 }
 
-/* panggung / penempatan */
+/* loc */
 .cake-stage{
   display:flex;
   align-items:center;
@@ -104,7 +104,7 @@ audio {
   position: relative;
 }
 
-/* wrapper cake: floating pelan */
+/* wrapper cake */
 .cake{
   position: relative;
   width: var(--cake-w);
@@ -118,7 +118,7 @@ audio {
   50%{ transform: translateY(-6px) }
 }
 
-/* piring */
+/* plate */
 .plate{
   position: absolute;
   left: 50%;
@@ -131,7 +131,7 @@ audio {
   box-shadow: inset 0 2px 0 #fff, 0 6px 14px rgba(0,0,0,.06);
 }
 
-/* ========== LAYERS ========== */
+/* layer cake */
 .layer{
   position:absolute;
   left:50%;
@@ -143,7 +143,7 @@ audio {
   overflow: visible;
 }
 
-/* shimmer halus pada badan kue */
+/* blink cake */
 .layer::before{
   content:"";
   position:absolute; inset:0;
@@ -157,12 +157,12 @@ audio {
   to { transform: translateX(120%); }
 }
 
-/* layer size/pos */
+/* layer size */
 .layer-bottom{ bottom: 6px;  height: 64px; }
 .layer-middle{ bottom: 56px; height: 58px; width: calc(var(--cake-w) - 22px); }
 .layer-top{    bottom: 102px; height: 46px; width: calc(var(--cake-w) - 44px); }
 
-/* ========== FROSTING ========== */
+/* frosting */
 .frosting{
   position:absolute;
   left:50%; top:-18px;
@@ -175,7 +175,7 @@ audio {
   overflow: visible;
 }
 
-/* gelombang + tetes frosting */
+/* ombak */
 .frosting::after{
   content:"";
   position:absolute;
@@ -192,7 +192,7 @@ audio {
   to{   background-position-x: -280px; }
 }
 
-/* ========== CANDLE ========== */
+/* candle */
 .candle{
   position:absolute;
   top: -62px;
@@ -217,7 +217,7 @@ audio {
   width: 2px; height: 10px; background:#333; border-radius:2px;
 }
 
-/* api lilin (flicker lembut) */
+/* apinya */
 .flame{
   position:absolute;
   left:50%; top:-22px;
