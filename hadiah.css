@@ -76,7 +76,7 @@ h2 {
 /* Puisi & Terimakasih */
 .section-akhir {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 40px 20px;
@@ -85,12 +85,48 @@ h2 {
 
 .section-akhir .puisi,
 .section-akhir .terimakasih {
-    flex: 1 1 300px;
+    flex: 1 1 320px;
     background: #fff0f6;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    font-size: 1em;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    font-size: 1.05em;
+    line-height: 1.8; /* biar paragraf enak dibaca */
+    text-align: left;
+    max-width: 600px; /* biar gak kepanjangan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-akhir .puisi:hover,
+.section-akhir .terimakasih:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Judul dalam card */
+.section-akhir h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #ff4d94;
+}
+
+/* Jarak antar paragraf */
+.section-akhir p {
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .section-akhir {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-akhir .puisi,
+    .section-akhir .terimakasih {
+        max-width: 90%;
+    }
 }
 
 /* Animasi fade/slide masuk */
