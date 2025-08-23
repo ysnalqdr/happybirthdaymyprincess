@@ -10,7 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-/* juduk */
 h1 {
     font-family: 'Fredoka One', cursive;
     font-size: 2.5em;
@@ -26,14 +25,13 @@ h2 {
     color: #ff4d94;
 }
 
-/*ucapan */
 .section-ucapan {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    flex-wrap: wrap; /* biar aman di mobile */
+    flex-wrap: wrap;
 }
 
 .section-ucapan img {
@@ -49,7 +47,6 @@ h2 {
     font-size: 1.2em;
 }
 
-/* foto */
 .section-memories {
     padding: 20px;
     overflow-x: auto;
@@ -73,7 +70,6 @@ h2 {
     transform: scale(1.05);
 }
 
-/* puisi trimakasih */
 .section-akhir {
     display: flex;
     justify-content: center;
@@ -91,9 +87,9 @@ h2 {
     border-radius: 18px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     font-size: 1.05em;
-    line-height: 1.8; /* biar paragraf enak dibaca */
+    line-height: 1.8;
     text-align: left;
-    max-width: 600px; /* biar gak kepanjangan */
+    max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -103,7 +99,6 @@ h2 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* judul card */
 .section-akhir h3 {
     font-family: 'Fredoka One', cursive;
     font-size: 1.4em;
@@ -111,12 +106,10 @@ h2 {
     color: #ff4d94;
 }
 
-/* jarak paragraf */
 .section-akhir p {
     margin-bottom: 15px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .section-akhir {
         flex-direction: column;
@@ -129,7 +122,6 @@ h2 {
     }
 }
 
-/* fade */
 .fade-slide {
     opacity: 0;
     transform: translateY(40px);
@@ -143,7 +135,6 @@ h2 {
     }
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     h1 {
         font-size: 2em;
@@ -169,7 +160,6 @@ h2 {
     }
 }
 
-/*PPPP*/
 .memories {
     margin: 50px 0;
     text-align: center;
@@ -182,7 +172,6 @@ h2 {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-/* container foto */
 .memories-container {
     display: flex;
     gap: 20px;
@@ -199,7 +188,6 @@ h2 {
     border-radius: 10px;
 }
 
-/* polaroid */
 .polaroid {
     flex: 0 0 auto;
     background: white;
@@ -211,7 +199,6 @@ h2 {
     scroll-snap-align: center;
 }
 
-/* ukuran foto */
 .polaroid img {
     display: block;
     width: 180px;
@@ -220,16 +207,17 @@ h2 {
     border-radius: 8px;
 }
 
-/* hover */
 .polaroid:hover {
     transform: rotate(-2deg) scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+
 .cards-container {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* biar rapi di HP */
+    align-items: flex-start;
+    flex-wrap: nowrap;
 }
 
 .card {
@@ -239,6 +227,7 @@ h2 {
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     max-width: 300px;
     text-align: left;
+    flex: 1 1 300px;
 }
 
 .card h3 {
